@@ -54,7 +54,7 @@
                                     <a class="nav-link" href="index.vbhtml">Acceuil <span class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="explore.aspx" id="navbarDropdown" role="button" " aria-haspopup="true" aria-expanded="false">Découvrir la Tunisie </a>
+                                    <a class="nav-link dropdown-toggle" href="explore.aspx" id="navbarDropdown" role="button"  aria-haspopup="true" aria-expanded="false">Découvrir la Tunisie </a>
 
                                 </li>
                                 <li class="nav-item dropdown">
@@ -71,7 +71,7 @@
                             </div>
                             <!-- Signin btn -->
                             <div class="dorne-signin-btn">
-                                <a href="#">S'authentifier</a>
+                                <a>@Html.ActionLink("S'authentifier", "Login", "Home")S'authentifier</a>
                             </div>
                             <!-- Add listings btn -->
 
@@ -84,7 +84,7 @@
 
     <!-- ***** Clients Area End ***** -->
     <!-- ****** Footer Area Start ****** -->
-    <div >
+    <div  class="container body-content">
         @RenderBody()
         <hr />
 

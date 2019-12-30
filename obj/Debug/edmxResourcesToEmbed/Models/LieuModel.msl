@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="mydbModel1StoreContainer" CdmEntityContainer="mydbEntities4">
+    <EntitySetMapping Name="Lieux">
+      <EntityTypeMapping TypeName="mydbModel1.Lieux">
+        <MappingFragment StoreEntitySet="Lieux">
+          <ScalarProperty Name="lieuId" ColumnName="lieuId" />
+          <ScalarProperty Name="nameLieu" ColumnName="nameLieu" />
+          <ScalarProperty Name="ville" ColumnName="ville" />
+          <ScalarProperty Name="zoneGeo" ColumnName="zoneGeo" />
+          <ScalarProperty Name="temperatureZone" ColumnName="temperatureZone" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

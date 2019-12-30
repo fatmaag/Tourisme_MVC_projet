@@ -80,3 +80,7 @@ C:\Users\HP\source\repos\Tourisme_MVC_projet\Tourisme_MVC_projet\obj\Debug\Touri
 C:\Users\HP\source\repos\Tourisme_MVC_projet\Tourisme_MVC_projet\obj\Debug\Tourisme_MVC_projet.csproj.CopyComplete
 C:\Users\HP\source\repos\Tourisme_MVC_projet\Tourisme_MVC_projet\obj\Debug\Tourisme_MVC_projet.dll
 C:\Users\HP\source\repos\Tourisme_MVC_projet\Tourisme_MVC_projet\obj\Debug\Tourisme_MVC_projet.pdb
+C:\Users\HP\source\repos\Tourisme_MVC_projet\Tourisme_MVC_projet\bin\EntityFramework.dll
+C:\Users\HP\source\repos\Tourisme_MVC_projet\Tourisme_MVC_projet\bin\EntityFramework.SqlServer.dll
+C:\Users\HP\source\repos\Tourisme_MVC_projet\Tourisme_MVC_projet\bin\EntityFramework.xml
+C:\Users\HP\source\repos\Tourisme_MVC_projet\Tourisme_MVC_projet\bin\EntityFramework.SqlServer.xml
