@@ -5,13 +5,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tunisia Lovers </title>
-    <link rel="icon" href=@Url.Content("/Content/img/core-img/favicon.ico")>
+    <link rel="icon" href=@Url.Content("~/Content/img/core-img/favicon.ico")>
 
     <!-- Core Stylesheet -->
-    <link href=@Url.Content("/Content/style.css") rel="stylesheet">
+    @Styles.Render("~/Content/style.css")
 
     <!-- Responsive CSS -->
-    <link href=@Url.Content("/Content/css/responsive/responsive.css") rel="stylesheet">
+    @Styles.Render("~/Content/css/responsive/responsive.css")
 
 </head>
 <body>
@@ -50,19 +50,20 @@
                         <!-- Nav -->
                         <div class="collapse navbar-collapse" id="dorneNav">
                             <ul class="navbar-nav mr-auto" id="dorneMenu">
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="index.vbhtml">Acceuil <span class="sr-only">(current)</span></a>
+                                <li class="nav-item dropdown">
+                                    <div class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">@Html.ActionLink("Acceuil", "Index", "Home",new { @class ="nav-link dropdown-toggle"})</div>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="explore.aspx" id="navbarDropdown" role="button"  aria-haspopup="true" aria-expanded="false">Découvrir la Tunisie </a>
+                                    <div class="nav-link dropdown-toggle" href="explore.aspx" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">@Html.ActionLink("Découvrir la Tunisie ", "About", "Home",  new { @class ="nav-link dropdown-toggle"}) </div>
 
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Média center </a>
+                                    <div class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">@Html.ActionLink("Média center", "Contact", "Home", new { @class ="nav-link dropdown-toggle"}) </div>
+
 
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link"> @Html.ActionLink("A propos", "About", "Home")</a>
+                                <li class="nav-item dropdown">
+                                    <div class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">@Html.ActionLink("A propos", "About", "Home", new { @class ="nav-link dropdown-toggle"})</div> 
                                 </li>
                             </ul>
                             <!-- Search btn -->
@@ -70,8 +71,8 @@
                                 <a id="search-btn" href="#"><i class="fa fa-search" aria-hidden="true"></i> Rechercher</a>
                             </div>
                             <!-- Signin btn -->
-                            <div class="dorne-signin-btn">
-                                <a>@Html.ActionLink("S'authentifier", "Login", "Home")S'authentifier</a>
+                            <div class ="dorne-signin-btn">
+                                @Html.ActionLink("S'authentifier", "Login", "Home",new { @class="dorne-signin-btn"})
                             </div>
                             <!-- Add listings btn -->
 
@@ -84,49 +85,47 @@
 
     <!-- ***** Clients Area End ***** -->
     <!-- ****** Footer Area Start ****** -->
-    <div  class="container body-content">
+    <div>
         @RenderBody()
-        <hr />
-
-    </div>
-
-    <footer class="dorne-footer-area">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12 d-md-flex align-items-center justify-content-between">
-                    <div class="footer-text">
-                        <p>
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            Copyright &copy;
-                            <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        </p>
-                    </div>
-                    <div class="footer-social-btns">
-                        <a href="#"><i class="fa fa-linkedin" aria-haspopup="true"></i></a>
-                        <a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-twitter" aria-haspopup="true"></i></a>
-                        <a href="#"><i class="fa fa-facebook" aria-haspopup="true"></i></a>
+        </div>
+        <footer class="dorne-footer-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 d-md-flex align-items-center justify-content-between">
+                        <div class="footer-text">
+                            <p>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                Copyright &copy;
+                                <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            </p>
+                        </div>
+                        <div class="footer-social-btns">
+                            <a href="#"><i class="fa fa-linkedin" aria-haspopup="true"></i></a>
+                            <a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-twitter" aria-haspopup="true"></i></a>
+                            <a href="#"><i class="fa fa-facebook" aria-haspopup="true"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
     <!-- ****** Footer Area End ****** -->
     <!-- jQuery-2.2.4 js -->
-    <script src=@Url.Content("/Content/js/jquery/jquery-2.2.4.min.js")></script>
+    <script src=@Url.Content("~/Content/js/jquery/jquery-2.2.4.min.js")></script>
     <!-- Popper js -->
-    <script src=@Url.Content("/Content/js/bootstrap/popper.min.js")></script>
+    <script src=@Url.Content("~/Content/js/bootstrap/popper.min.js")></script>
     <!-- Bootstrap-4 js -->
-    <script src=@Url.Content("/Content/js/jquery/jquery-2.2.4.min.js")></script>
+    <script src=@Url.Content("~/Content/js/jquery/jquery-2.2.4.min.js")></script>
     <!-- All Plugins js -->
-    <script src=@Url.Content("/Content/js/bootstrap/popper.min.js")></script>
-    <script src=@Url.Content("/Content/js/bootstrap/bootstrap.min.js")></script>
+    <script src=@Url.Content("~/Content/js/bootstrap/popper.min.js")></script>
+    <script src=@Url.Content("~/Content/js/bootstrap/bootstrap.min.js")></script>
     <!-- All Plugins js -->
-    <script src=@Url.Content("/Content/js/others/plugins.js")></script>
+    <script src=@Url.Content("~/Content/js/others/plugins.js")></script>
     <!-- Active JS -->
-    <script src=@Url.Content("/Content/js/active.js")></script>
+    <script src=@Url.Content("~/Content/js/active.js")></script>
 
 </body>
 </html>
